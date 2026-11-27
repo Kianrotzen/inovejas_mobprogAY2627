@@ -1,16 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'constants.dart';
 import 'screens/home_screen.dart';
 import 'screens/newsfeed_screen.dart';
+import 'screens/notification_screen.dart';
 
 void main() {
-  runApp(const RoblesFacebook());
+  runApp(const TypeshiApp());
 }
 
-class RoblesFacebook extends StatelessWidget {
-  const RoblesFacebook({super.key});
+class TypeshiApp extends StatelessWidget {
+  const TypeshiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +22,15 @@ class RoblesFacebook extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Facebook Replication',
+          title: APP_NAME,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: APP_PRIMARY),
+          ),
           initialRoute: '/home',
           routes: {
-            '/newsfeed': (context) => NewsFeedScreen(),
-            '/home': (context) => HomeScreen(),
+            '/newsfeed': (context) => const NewsFeedScreen(),
+            '/notifications': (context) => const NotificationScreen(),
+            '/home': (context) => const HomeScreen(),
           },
         );
       },

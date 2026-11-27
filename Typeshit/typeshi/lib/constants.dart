@@ -1,11 +1,9 @@
-
-// ignore_for_file: constant_identifier_names
-
 import 'package:flutter/material.dart';
 
+const String APP_NAME = 'GotEm';
 
-const Color FB_PRIMARY = Color(0xFF0167f8);
-const Color FB_SECONDARY = Color(0xFF003bb3);
-const Color FB_DARK_PRIMARY = Color(0xFF021452);
-const Color FB_LIGHT_PRIMARY = Color(0xFF74b7fb);
-const Color FB_TEXT_COLOR_WHITE = Color(0xFFe0f0fd);
+const Color APP_PRIMARY = Color.fromARGB(255, 28, 10, 58); //0xFF7C3AED
+const Color APP_SECONDARY = Color(0xFF5B21B6);
+const Color APP_DARK_PRIMARY = Color(0xFF2E1065);
+const Color APP_LIGHT_PRIMARY = Color(0xFFC4B5FD);
+const Color APP_TEXT_COLOR_WHITE = Color(0xFFF5F3FF);

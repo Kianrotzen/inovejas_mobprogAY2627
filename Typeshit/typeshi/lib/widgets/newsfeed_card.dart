@@ -77,8 +77,8 @@ class NewsFeedCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
-                Icon(Icons.more_horiz),
+                const Spacer(),
+                const Icon(Icons.more_horiz),
               ],
             ),
 
@@ -114,14 +114,14 @@ class NewsFeedCard extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.favorite_border,
-                      color: FB_DARK_PRIMARY,
+                      color: APP_DARK_PRIMARY,
                       size: ScreenUtil().setSp(18),
                     ),
                     SizedBox(width: ScreenUtil().setWidth(4)),
                     CustomText(
                       text: numOfLikes.toString(),
                       fontSize: ScreenUtil().setSp(12),
-                      color: FB_DARK_PRIMARY,
+                      color: APP_DARK_PRIMARY,
                     ),
                   ],
                 ),
@@ -129,14 +129,14 @@ class NewsFeedCard extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.mode_comment_outlined,
-                      color: FB_DARK_PRIMARY,
+                      color: APP_DARK_PRIMARY,
                       size: ScreenUtil().setSp(18),
                     ),
                     SizedBox(width: ScreenUtil().setWidth(4)),
                     CustomText(
                       text: 'Comment',
                       fontSize: ScreenUtil().setSp(12),
-                      color: FB_DARK_PRIMARY,
+                      color: APP_DARK_PRIMARY,
                     ),
                   ],
                 ),
@@ -144,14 +144,14 @@ class NewsFeedCard extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.redo,
-                      color: FB_DARK_PRIMARY,
+                      color: APP_DARK_PRIMARY,
                       size: ScreenUtil().setSp(18),
                     ),
                     SizedBox(width: ScreenUtil().setWidth(4)),
                     CustomText(
                       text: 'Share',
                       fontSize: ScreenUtil().setSp(12),
-                      color: FB_DARK_PRIMARY,
+                      color: APP_DARK_PRIMARY,
                     ),
                   ],
                 ),
@@ -166,21 +166,23 @@ class NewsFeedCard extends StatelessWidget {
                       const AssetImage('assets/images/BlindSided.jpg'),
                 ),
                 SizedBox(width: ScreenUtil().setWidth(10)),
-                Container(
-                  padding: EdgeInsets.fromLTRB(ScreenUtil().setSp(10), 0, 0, 0),
-                  alignment: Alignment.centerLeft,
-                  height: ScreenUtil().setHeight(25),
-                  width: ScreenUtil().setWidth(330),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(ScreenUtil().setSp(10)),
+                Expanded(
+                  child: Container(
+                    padding:
+                        EdgeInsets.fromLTRB(ScreenUtil().setSp(10), 0, 0, 0),
+                    alignment: Alignment.centerLeft,
+                    height: ScreenUtil().setHeight(25),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(ScreenUtil().setSp(10)),
+                      ),
                     ),
-                  ),
-                  child: CustomText(
-                    text: 'Write a comment...',
-                    fontSize: ScreenUtil().setSp(11),
-                    color: Colors.grey,
+                    child: CustomText(
+                      text: 'Write a comment...',
+                      fontSize: ScreenUtil().setSp(11),
+                      color: Colors.grey,
+                    ),
                   ),
                 ),
               ],
